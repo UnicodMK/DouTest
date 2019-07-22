@@ -38,7 +38,7 @@ public class SalariesPage extends ParentPage{
 
     }
 
-    public void selectCityTypeFromDropDoun(String cityType) {
+    public void selectCityTypeFromDropDown(String cityType) {
         actionsWithOurElements.selectTextInDD(cityDD, cityType);
     }
 
@@ -50,3 +50,6 @@ public class SalariesPage extends ParentPage{
         actionsWithOurElements.selectTextInDD(languageDD, languageType);
     }
 }
+
+
+
