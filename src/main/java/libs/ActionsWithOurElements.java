@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import ru.yandex.qatools.htmlelements.element.TypifiedElement;
 
 public class ActionsWithOurElements {
     WebDriver webDriver;
@@ -23,14 +24,16 @@ public class ActionsWithOurElements {
 
     }
 
-    public void enterTextIntoInput(WebElement element, String text) {
+
+
+    public void enterTextIntoInput(TypifiedElement element, String text) {
         try {
             wait10.until(ExpectedConditions.elementToBeClickable(element));
             element.click();
             //  WebElement inputLogin = webDriver.findElement(By.name("username"));
             element.clear();
             element.sendKeys(text);
-            logger.info(text + "was inputted into input ");
+            logger.info(text + "was inputted into input " + element.getName());
 
         } catch (Exception e) {
             logger.error("Can not work with element");
@@ -39,11 +42,14 @@ public class ActionsWithOurElements {
     }
 
 
+
+
+
     public void clickOnElement(WebElement webElement) {
         try {
             wait10.until(ExpectedConditions.elementToBeClickable(webElement));
             webElement.click();
-            logger.info("Element was clicked");
+            logger.info("Element was clicked" );
         } catch (Exception e) {
             logger.error("Can not work with element");
             Assert.fail("Can not work with element");
@@ -52,7 +58,6 @@ public class ActionsWithOurElements {
 
     public void clickOnElement(String locator) {
         try {
-
             clickOnElement(webDriver.findElement(By.xpath(locator)));
 
         } catch (Exception e) {

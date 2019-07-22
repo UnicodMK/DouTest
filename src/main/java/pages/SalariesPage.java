@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 public class SalariesPage extends ParentPage{
 
     public SalariesPage(WebDriver webDriver) {
-        super(webDriver,"https://jobs." ,"/salaries/");
+        super(webDriver,"https://jobs.","/salaries/");
     }
 
 

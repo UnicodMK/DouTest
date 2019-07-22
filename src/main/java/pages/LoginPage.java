@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.yandex.qatools.htmlelements.element.TextInput;
 
 public class LoginPage extends ParentPage {
     public LoginPage(WebDriver webDriver) {
@@ -17,10 +18,10 @@ public class LoginPage extends ParentPage {
     private WebElement buttonLoginByMail;
 
     @FindBy(name = "username")
-    private WebElement inputLogin;
+    private TextInput inputLogin;
 
     @FindBy(className = "txtPassword")
-    private WebElement inputPassword;
+    private TextInput inputPassword;
 
     @FindBy(xpath = "//*[@id=\"_loginDialog\"]/div[2]/div[2]/div[1]/div/div[2]/div[2]/div[2]/button")
     private WebElement buttonSubmit;
