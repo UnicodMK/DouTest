@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.HomePage;
 import pages.LoginPage;
+import pages.SalariesPage;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -17,6 +18,10 @@ public class ParentTest {
 
     protected LoginPage loginPage;
     protected HomePage homePage;
+    protected SalariesPage salariesPage;
+
+
+
     @Before
     public void setUp(){
         File file = new File("./src/drivers/chromedriver.exe");
@@ -29,6 +34,11 @@ public class ParentTest {
 
         loginPage = new LoginPage(webDriver);
         homePage = new HomePage(webDriver);
+        salariesPage = new SalariesPage(webDriver);
+
+
+
+
     }
 
 
@@ -37,7 +47,7 @@ public class ParentTest {
         webDriver.quit();
     }
 
-    public void checkExpectedResult(String massage, boolean exeptedResult, boolean actualResult){
-        Assert.assertEquals(massage, exeptedResult, actualResult);
+    public void checkExpectedResult(String massage, boolean expctedResult, boolean actualResult){
+        Assert.assertEquals(massage, expctedResult, actualResult);
     }
 }
