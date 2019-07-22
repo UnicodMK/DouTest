@@ -5,9 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class SalariesPage extends ParentPage{
+
     public SalariesPage(WebDriver webDriver) {
-        super(webDriver);
+        super(webDriver,"https://jobs." ,"/salaries/");
     }
+
 
 
 

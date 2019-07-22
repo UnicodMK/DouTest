@@ -12,15 +12,19 @@ public class SalariesTest extends ParentTest {
     public void addNewSalaries(){
 
         loginPage.validLogin();
+        homePage.checkCurrentUrl();
         homePage.checkIsAvatarDisplayed();
         homePage.clickOnSalaries();
 
 
+        salariesPage.checkCurrentUrl();
         salariesPage.selectPeriodTypeFromDropDown("декабрь 2018");
         salariesPage.selectCityTypeFromDropDown("Львов");
         salariesPage.selectTypeTitle("Technical Lead");
         salariesPage.selectLanguageType("Kotlin");
         salariesPage.clickOnMenuVacancies();
+
+
 
 
     }

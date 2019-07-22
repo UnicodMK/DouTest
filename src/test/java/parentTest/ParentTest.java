@@ -1,5 +1,6 @@
 package parentTest;
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -20,6 +21,7 @@ public class ParentTest {
     protected SalariesPage salariesPage;
 
 
+
     @Before
     public void setUp(){
         File file = new File("./src/drivers/chromedriver.exe");
@@ -35,13 +37,15 @@ public class ParentTest {
         salariesPage = new SalariesPage(webDriver);
 
 
+
+
     }
 
 
-   /* @After
+    @After
     public void tearDown(){
         webDriver.quit();
-    }*/
+    }
 
     public void checkExpectedResult(String massage, boolean expctedResult, boolean actualResult){
         Assert.assertEquals(massage, expctedResult, actualResult);

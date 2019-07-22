@@ -19,12 +19,5 @@ public class LoginTestWithPageObject extends ParentTest {
 
     }
 
-    @Test
-    public void unvalidLogin(){
-     loginPage.loginWithCred("Unicod.mk@gmail.com","mx5vug2");
-        {
 
-            checkExpectedResult("Avatar should not by present", false, homePage.isAvatarPresent());
-        }
-    }
 }

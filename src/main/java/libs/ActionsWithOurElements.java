@@ -6,18 +6,27 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ActionsWithOurElements {
     WebDriver webDriver;
     Logger logger = Logger.getLogger(getClass());
+    WebDriverWait wait10, wait15;
 
     public ActionsWithOurElements(WebDriver webDriver) {
         this.webDriver = webDriver;
+        wait10 = new WebDriverWait(webDriver, 10);
+        wait15 = new WebDriverWait(webDriver, 15);
+
+
     }
 
     public void enterTextIntoInput(WebElement element, String text) {
         try {
+            wait10.until(ExpectedConditions.elementToBeClickable(element));
+            element.click();
             //  WebElement inputLogin = webDriver.findElement(By.name("username"));
             element.clear();
             element.sendKeys(text);
@@ -32,6 +41,7 @@ public class ActionsWithOurElements {
 
     public void clickOnElement(WebElement webElement) {
         try {
+            wait10.until(ExpectedConditions.elementToBeClickable(webElement));
             webElement.click();
             logger.info("Element was clicked");
         } catch (Exception e) {
@@ -42,6 +52,7 @@ public class ActionsWithOurElements {
 
     public void clickOnElement(String locator) {
         try {
+
             clickOnElement(webDriver.findElement(By.xpath(locator)));
 
         } catch (Exception e) {

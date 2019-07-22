@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends ParentPage {
     public LoginPage(WebDriver webDriver) {
-        super(webDriver);
+        super(webDriver,"https://","/");
     }
 
     @FindBy(id = "login-link")
