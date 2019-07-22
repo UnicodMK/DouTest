@@ -114,4 +114,8 @@ public class LoginPage extends ParentPage {
         enterTextInToInputPass(password);
         clickOnButtonSubmit();
     }
+
+    public void validLogin() {
+        loginWithCred("Unicod.mk@gmail.com", "mx5vug");
+    }
 }
