@@ -20,8 +20,8 @@ public class SalariesTest extends ParentTest {
         salariesPage.checkCurrentUrl();
         salariesPage.selectPeriodTypeFromDropDown("декабрь 2018");
         salariesPage.selectCityTypeFromDropDown("Львов");
-        salariesPage.selectTypeTitle("Technical Lead");
-        salariesPage.selectLanguageType("Kotlin");
+        salariesPage.selectTypeTitle("System Architect");
+        salariesPage.selectLanguageType("Java");
         salariesPage.clickOnMenuVacancies();
 
 
