@@ -49,10 +49,10 @@ public class ParentTest {
     }
 
 
-   /* @After
+    @After
     public void tearDown(){
         webDriver.quit();
-    }*/
+    }
 
     public void checkExpectedResult(String massage, boolean expctedResult, boolean actualResult){
         Assert.assertEquals(massage, expctedResult, actualResult);
