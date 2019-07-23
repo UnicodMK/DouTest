@@ -5,9 +5,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.HomePage;
-import pages.LoginPage;
-import pages.SalariesPage;
+import pages.*;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -19,6 +17,10 @@ public class ParentTest {
     protected LoginPage loginPage;
     protected HomePage homePage;
     protected SalariesPage salariesPage;
+    protected LentaPage lentaPage;
+    protected LentaArticlesPage lentaArticlesPage;
+    protected CalendarPage calendarPage;
+    protected JobsPage jobsPage;
 
 
 
@@ -35,6 +37,11 @@ public class ParentTest {
         loginPage = new LoginPage(webDriver);
         homePage = new HomePage(webDriver);
         salariesPage = new SalariesPage(webDriver);
+        lentaPage = new LentaPage(webDriver);
+        lentaArticlesPage = new LentaArticlesPage(webDriver);
+        calendarPage = new CalendarPage(webDriver);
+        jobsPage = new JobsPage(webDriver);
+
 
 
 
@@ -42,10 +49,10 @@ public class ParentTest {
     }
 
 
-    @After
+   /* @After
     public void tearDown(){
         webDriver.quit();
-    }
+    }*/
 
     public void checkExpectedResult(String massage, boolean expctedResult, boolean actualResult){
         Assert.assertEquals(massage, expctedResult, actualResult);

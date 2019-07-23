@@ -31,6 +31,8 @@ public class SalariesPage extends ParentPage{
 
 
 
+
+
     public void clickOnMenuVacancies() {
         actionsWithOurElements.clickOnElement(menuVacancies);
     }
@@ -51,6 +53,9 @@ public class SalariesPage extends ParentPage{
     public void selectLanguageType(String languageType) {
         actionsWithOurElements.selectTextInDD(languageDD, languageType);
     }
+
+
+
 }
 
 

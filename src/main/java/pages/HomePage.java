@@ -14,6 +14,16 @@ public class HomePage extends ParentPage{
     @FindBy(xpath = "/html/body/div/header/div/a[2]/img")
     private WebElement avatar;
 
+   @FindBy(xpath = "/html/body/div/header/ul/li[4]/a")
+   private WebElement lenta;
+
+
+   @FindBy(xpath = "/html/body/div/header/ul/li[7]/a")
+   private WebElement calendarPage;
+
+
+   @FindBy(xpath = "/html/body/div/header/ul/li[6]/a")
+   private WebElement menuJobs;
 
 
 
@@ -36,4 +46,16 @@ public class HomePage extends ParentPage{
     }
 
 
+    public void clickOnLenta() {
+        actionsWithOurElements.clickOnElement(lenta);
+    }
+
+    public void clickOnCalendarPage() {
+        actionsWithOurElements.clickOnElement(calendarPage);
+    }
+
+
+    public void clickOnJobs() {
+        actionsWithOurElements.clickOnElement(menuJobs);
+    }
 }
